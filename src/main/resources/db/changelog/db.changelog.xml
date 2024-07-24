@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="SYSTEM">
+        <sqlFile path="db/changelog/db.user_tbl.sql" />
+    </changeSet>
+
+    <changeSet id="2" author="SYSTEM">
+        <sqlFile path="db/changelog/db.task_tbl.sql" />
+    </changeSet>
+
+    <changeSet id="3" author="SYSTEM">
+        <sqlFile path="db/changelog/db.message_tbl.sql" />
+    </changeSet>
+
+    <changeSet id="4" author="SYSTEM">
+        <sqlFile path="db/changelog/db.fill_users.sql" />
+    </changeSet>
+
+    <changeSet id="5" author="SYSTEM">
+        <sqlFile encoding="utf8"
+                 path="db/changelog/db.fill_task.sql"
+                 splitStatements="false"
+        />
+    </changeSet>
+
+
+    <!--    <changeSet id="5" author="SYSTEM">-->
+<!--        <sqlFile path="db/changelog/db.fill_task.sql" />-->
+<!--    </changeSet>-->
+
+    <changeSet id="6" author="SYSTEM">
+        <sqlFile path="db/changelog/db.fill_msg.sql" />
+    </changeSet>
+
+    <changeSet id="7" author="SYSTEM">
+        <sqlFile encoding="utf8"
+                 path="db/changelog/db.message_ref.sql"
+                 splitStatements="false"
+        />
+<!--        relativeToChangelogFile="true"-->
+<!--                 stripComments="false"-->
+<!--                 endDelimiter="\nGO"-->
+<!--        />-->
+    </changeSet>
+</databaseChangeLog>
